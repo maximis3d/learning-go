@@ -19,12 +19,13 @@ func Hello(name, language string) string {
 
 func gettingPrefix(language string) (prefix string) {
 	switch language {
+	default:
+		prefix = englishHelloPrefix
+
 	case french:
 		prefix = frenchHelloPrefix
 	case spanish:
 		prefix = spanishHelloPrefix
-	default:
-		prefix = englishHelloPrefix
 	}
 	return
 }

@@ -27,6 +27,24 @@ func TestHello(t *testing.T) {
 
 		assertCorrectMessage(t, got, want)
 	})
+	t.Run("Testing valid prefix: French", func(t *testing.T) {
+		got := gettingPrefix("French")
+		want := "Bonjour, "
+
+		assertCorrectMessage(t, got, want)
+	})
+	t.Run("Testing valid prefix: Spanish", func(t *testing.T) {
+		got := gettingPrefix("Spanish")
+		want := "Hola, "
+
+		assertCorrectMessage(t, got, want)
+	})
+	t.Run("Testing valid prefix: Default", func(t *testing.T) {
+		got := gettingPrefix("")
+		want := "Hello, "
+
+		assertCorrectMessage(t, got, want)
+	})
 }
 
 func assertCorrectMessage(t testing.TB, got, want string) {
