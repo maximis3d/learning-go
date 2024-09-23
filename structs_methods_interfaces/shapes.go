@@ -2,6 +2,10 @@ package structsmethodsinterfaces
 
 import "math"
 
+type Shape interface {
+	Area() float64
+}
+
 type Rectangle struct {
 	Width  float64
 	Height float64
@@ -12,7 +16,7 @@ type Circle struct {
 }
 
 func (r Rectangle) Area() float64 {
-	return r.Height * r.Width
+	return r.Width * r.Height
 }
 
 func (c Circle) Area() float64 {
